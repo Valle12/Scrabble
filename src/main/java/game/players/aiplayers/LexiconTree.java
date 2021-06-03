@@ -40,7 +40,6 @@ public class LexiconTree {
         helper = helper.getChild(c);
       }
     }
-    // TODO REMOVE DUPLICATE SUBTREES --> Saving a lot of space
   }
 
   /**

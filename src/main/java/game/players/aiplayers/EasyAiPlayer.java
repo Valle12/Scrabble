@@ -69,7 +69,7 @@ public class EasyAiPlayer extends AiPlayer {
         placeTile(placement.getTile(), placement.getRow(), placement.getColumn());
         rack.remove(placement.getTile());
         try {
-          Thread.sleep(0); // TODO INCREASE
+          Thread.sleep(0);
         } catch (InterruptedException e) {
           e.printStackTrace();
         }
@@ -227,8 +227,6 @@ public class EasyAiPlayer extends AiPlayer {
         }
       }
     }
-    // TODO change to a placement which is not the best
-    // Try out placements and get the smallest one
     for (List<Placement> placements : possiblePlacements) {
       if (placements.size() == 0) {
         continue;
