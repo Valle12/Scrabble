@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.WelcomeViewController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="321.0" prefHeight="80.0" style="-fx-background-color: #fdf8da;" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Chalkboard" size="48.0" />
+            </font>
+        </Label>
+        <Label layoutX="278.0" layoutY="331.0" prefHeight="100.0" style="-fx-background-color: #fdf8da;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <Button layoutX="990.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#exitGame" prefHeight="35.0" prefWidth="140.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="EXIT" textAlignment="CENTER" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Chalkboard" size="18.0" />
+            </font>
+        </Button>
+        <BorderPane layoutX="477.0" layoutY="206.0" prefHeight="200.0" prefWidth="346.0" style="-fx-background-color: #edece1; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="90.0">
+            <top>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="450.0" stylesheets="@../stylesheets/buttonstyle.css" text="Welcome to Scrabble" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Chalkboard" size="36.0" />
+                    </font>
+                    <BorderPane.margin>
+                        <Insets top="30.0" />
+                    </BorderPane.margin>
+                </Label>
+            </top>
+            <bottom>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="400.0" stylesheets="@../stylesheets/buttonstyle.css" text="Made by: &#10;Nicolas, Yilmaz, Valentin, &#10;Yasin, Vincent und Max&#10;" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Chalkboard" size="24.0" />
+                    </font>
+                    <BorderPane.margin>
+                        <Insets bottom="30.0" />
+                    </BorderPane.margin>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="20.0" right="20.0" />
+                    </padding>
+                </Label>
+            </bottom>
+            <center>
+                <Button mnemonicParsing="false" onMouseClicked="#continueToLobby" style="-fx-background-color: #EBEFB6;" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Continue" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Chalkboard" size="20.0" />
+                    </font>
+                    <BorderPane.margin>
+                        <Insets top="50.0" />
+                    </BorderPane.margin>
+                </Button>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

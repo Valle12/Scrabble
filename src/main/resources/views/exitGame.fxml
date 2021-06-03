@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
+            prefWidth="300.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gui.controllers.ExitGameController">
+    <children>
+        <VBox alignment="TOP_CENTER" maxHeight="200.0" maxWidth="100.0" minHeight="200.0" minWidth="100.0"
+              prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #fbf8da;"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You're about to close the game.">
+                    <font>
+                        <Font name="Chalkboard" size="18.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets top="30.0"/>
+                    </VBox.margin>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure?">
+                    <font>
+                        <Font name="Chalkboard" size="14.0"/>
+                    </font>
+                </Text>
+                <HBox alignment="CENTER" prefHeight="74.0" prefWidth="300.0" spacing="50.0">
+                    <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#exitGame" prefHeight="30.0" prefWidth="75.0"
+                                styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Continue">
+                            <font>
+                                <Font name="Chalkboard" size="14.0"/>
+                            </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                                onMouseClicked="#cancelExit" prefHeight="30.0" prefWidth="75.0" styleClass="smallButton"
+                                stylesheets="@../stylesheets/buttonstyle.css" text="Cancel">
+                            <font>
+                                <Font name="Chalkboard" size="14.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

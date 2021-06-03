@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="700.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx"
+            fx:controller="gui.controllers.PlayerLobbyController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="321.0" prefHeight="80.0"
+               style="-fx-background-color: #fdf8da;" text="SCRABBLE" textAlignment="CENTER" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Chalkboard" size="48.0"/>
+            </font>
+        </Label>
+        <Label layoutX="278.0" layoutY="331.0" prefHeight="100.0" style="-fx-background-color: #fdf8da;"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+        <Button mnemonicParsing="false" onMouseClicked="#backToLogin" prefHeight="35.0" prefWidth="140.0"
+                styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Back To Login"
+                textAlignment="CENTER" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Chalkboard" size="18.0"/>
+            </font>
+        </Button>
+        <Button layoutX="990.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#exitGame" prefHeight="35.0"
+                prefWidth="140.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="EXIT"
+                textAlignment="CENTER" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Chalkboard" size="18.0"/>
+            </font>
+        </Button>
+        <BorderPane layoutX="477.0" layoutY="206.0" prefHeight="200.0" prefWidth="346.0" AnchorPane.bottomAnchor="100.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+            <center>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                                onMouseClicked="#playScrabble" prefHeight="100.0" prefWidth="400.0"
+                                styleClass="bigButton" stylesheets="@../stylesheets/buttonstyle.css"
+                                text="Play Scrabble" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                            <font>
+                                <Font name="Chalkboard" size="18.0"/>
+                            </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                                onMouseClicked="#changeToProfileView" prefHeight="100.0" prefWidth="400.0"
+                                styleClass="bigButton" stylesheets="@../stylesheets/buttonstyle.css"
+                                text="Manage Profiles">
+                            <font>
+                                <Font name="Chalkboard" size="18.0"/>
+                            </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                                onMouseClicked="#settings" prefHeight="100.0" prefWidth="400.0" styleClass="bigButton"
+                                stylesheets="@../stylesheets/buttonstyle.css" text="Settings">
+                            <font>
+                                <Font name="Chalkboard" size="18.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="50.0"/>
+                    </BorderPane.margin>
+                </VBox>
+            </center>
+            <top>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome back ">
+                            <font>
+                                <Font name="Chalkboard" size="36.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="20.0" top="35.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" text="&lt;Username&gt;">
+                            <font>
+                                <Font name="Chalkduster" size="36.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="10.0" right="20.0" top="35.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <ImageView fx:id="profileImage" fitHeight="100.0" fitWidth="100.0"
+                                   onMouseClicked="#changeToProfileView" pickOnBounds="true" preserveRatio="true"
+                                   style="-fx-cursor: hand;">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="20.0" top="35.0"/>
+                            </HBox.margin>
+                            <image>
+                                <Image url="@../pictures/ProfileIcon.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

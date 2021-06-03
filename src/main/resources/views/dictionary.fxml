@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.DictionaryController">
+   <children>
+      <Label minHeight="70.0" prefHeight="70.0" style="-fx-background-color: #fbf8da;" text="Selected dictionary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Chalkboard" size="24.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <content>
+            <VBox fx:id="vbox">
+               <padding>
+                  <Insets left="5.0" top="2.0" />
+               </padding></VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #fbf8da;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#previousPage" prefHeight="35.0" prefWidth="80.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Previous">
+               <font>
+                  <Font name="Chalkboard" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="page" alignment="CENTER" prefHeight="35.0" prefWidth="80.0" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font name="Chalkboard" size="14.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#nextPage" prefHeight="35.0" prefWidth="80.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Next">
+               <font>
+                  <Font name="Chalkboard" size="14.0" />
+               </font>
+            </Button>
+         </children></HBox>
+   </children>
+</AnchorPane>

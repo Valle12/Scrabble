@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.GameSettingsController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="321.0" prefHeight="80.0" style="-fx-background-color: #fdf8da;" text="Game Settings" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Chalkboard" size="48.0" />
+            </font>
+        </Label>
+        <Label layoutX="278.0" layoutY="331.0" prefHeight="100.0" prefWidth="1152.0" style="-fx-background-color: #fdf8da;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <VBox alignment="CENTER" layoutX="136.0" layoutY="107.0" prefHeight="278.0" prefWidth="498.0" AnchorPane.bottomAnchor="154.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="127.0" AnchorPane.topAnchor="107.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="483.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Letters:">
+                     <font>
+                        <Font name="Chalkboard" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#decreaseLetter" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="&lt;">
+                     <HBox.margin>
+                        <Insets left="68.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="letter" alignment="CENTER" prefHeight="27.0" prefWidth="30.0" text="A">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#increaseLetter" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="&gt;">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="483.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Value:">
+                     <font>
+                        <Font name="Chalkboard" size="24.0" />
+                     </font>
+                  </Text>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#decreaseValue" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="-">
+                     <HBox.margin>
+                        <Insets left="88.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="value" alignment="CENTER" prefHeight="27.0" prefWidth="27.0" text="1">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#increaseValue" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="+">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="483.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Distribution:">
+                     <font>
+                        <Font name="Chalkboard" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#decreaseDistribution" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="-">
+                     <HBox.margin>
+                        <Insets left="23.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="distribution" alignment="CENTER" prefHeight="27.0" prefWidth="27.0" text="9">
+                     <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#increaseDistribution" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="+">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="483.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upload Dictionary:">
+                     <font>
+                        <Font name="Chalkboard" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="160.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Joker Distribution:">
+                     <font>
+                        <Font name="Chalkboard" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#selectDictionary" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Select">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="dictionary" prefHeight="37.0" prefWidth="282.0" styleClass="tileBottom" stylesheets="@../stylesheets/labelstyle.css">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#decreaseJoker" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="-">
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="joker" alignment="CENTER" prefHeight="27.0" prefWidth="27.0" text="2">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#increaseJoker" prefHeight="37.0" prefWidth="37.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="+">
+                     <font>
+                        <Font name="Chalkboard" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#apply" prefHeight="49.0" prefWidth="107.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Apply">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="apply" mnemonicParsing="false" onMouseClicked="#cancel" prefHeight="49.0" prefWidth="123.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="290.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

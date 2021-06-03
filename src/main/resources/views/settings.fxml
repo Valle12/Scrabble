@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.SettingsController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="321.0" prefHeight="80.0" style="-fx-background-color: #fdf8da;" text="Settings" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Chalkboard" size="48.0" />
+            </font>
+        </Label>
+        <Label layoutX="278.0" layoutY="331.0" prefHeight="100.0" style="-fx-background-color: #fdf8da;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <Button mnemonicParsing="false" onMouseClicked="#backToPlayerLobby" prefHeight="37.0" prefWidth="207.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="Back To Player Lobby" textAlignment="CENTER" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Chalkboard" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="990.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#exitGame" prefHeight="35.0" prefWidth="140.0" styleClass="smallButton" stylesheets="@../stylesheets/buttonstyle.css" text="EXIT" textAlignment="CENTER" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Chalkboard" size="18.0" />
+            </font>
+        </Button>
+        <BorderPane layoutX="477.0" layoutY="206.0" prefHeight="200.0" prefWidth="346.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #e5e5e5; -fx-background-radius: 15; -fx-border-width: 1; -fx-border-color: black; -fx-border-radius: 15; -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);" text="Sound" textAlignment="CENTER">
+                            <font>
+                                <Font name="Chalkboard" size="36.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
+                        </Button>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="40.0">
+                     <children>
+                        <CheckBox fx:id="soundOn" mnemonicParsing="false" onMouseClicked="#enableSound" selected="true" text="ON">
+                           <font>
+                              <Font name="Chalkboard" size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </CheckBox>
+                        <CheckBox fx:id="soundOff" mnemonicParsing="false" onMouseClicked="#disableSound" text="OFF">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Chalkboard" size="36.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

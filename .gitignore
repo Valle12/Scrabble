@@ -1,0 +1,14 @@
+#output
+target
+classes
+res
+out
+
+#IDE/Project data
+*.iml
+.idea
+.project
+.classpath
+
+#Test
+src/main/resources/data/profiles.xml

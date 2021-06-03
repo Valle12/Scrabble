@@ -1,0 +1,91 @@
+.otherlabel {
+    -fx-background-color: #d7d96c;
+    -fx-background-radius: 15;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 15;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.tile {
+    -fx-background-color: #1e7e39;
+    -fx-background-radius: 2;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+}
+
+.tileTWS {
+    -fx-background-color: #E13838;
+    -fx-background-radius: 2;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+}
+
+.tileDWS {
+    -fx-background-color: #FF6AEA;
+    -fx-background-radius: 2;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+}
+
+.tileDLS {
+    -fx-background-color: #00C8F9;
+    -fx-background-radius: 2;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+}
+
+.tileTLS {
+    -fx-background-color: #0056F9;
+    -fx-background-radius: 2;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+}
+
+.tileStar {
+    -fx-background-color: #FF6AEA;
+    -fx-background-image: url("../pictures/Star.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-radius: 2;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+}
+
+.tileWithLetter {
+    -fx-background-color: #EDECE1;
+    -fx-background-radius: 2;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+}
+
+.tileBottom {
+    -fx-background-color: #EDECE1;
+    -fx-background-radius: 4;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+    -fx-border-color: black;
+    -fx-border-radius: 4;
+}
+
+.tileBottomSelected {
+    -fx-background-color: #EDECE1;
+    -fx-background-radius: 4;
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 18px;
+    -fx-border-color: black;
+    -fx-border-radius: 4;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.digitTile {
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 8px;
+}
+
+.digitRack{
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 12px;
+}
+

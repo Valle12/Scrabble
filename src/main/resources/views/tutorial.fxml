@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.util.Duration?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="700.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx"
+            fx:controller="gui.controllers.TutorialController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="321.0" prefHeight="80.0"
+               style="-fx-background-color: #fdf8da;" text="Tutorial " textAlignment="CENTER"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Chalkboard" size="48.0"/>
+            </font>
+        </Label>
+        <Label layoutX="278.0" layoutY="331.0" prefHeight="100.0" style="-fx-background-color: #fdf8da;"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+        <Button mnemonicParsing="false" onMouseClicked="#backToPlayScrabble" prefHeight="35.0" styleClass="smallButton"
+                stylesheets="@../stylesheets/buttonstyle.css" text="Back to Play Scrabble" textAlignment="CENTER"
+                AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Chalkboard" size="18.0"/>
+            </font>
+        </Button>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+            <left>
+                <VBox alignment="CENTER_LEFT" prefHeight="520.0" prefWidth="300.0" BorderPane.alignment="CENTER_LEFT">
+                    <children>
+                        <Label fx:id="endTutorial" onMouseClicked="#backToPlayScrabble" prefHeight="46.0"
+                               prefWidth="114.0" style="-fx-cursor: hand;" styleClass="tileBottom"
+                               stylesheets="@../stylesheets/labelstyle.css" text="End Tutorial" textFill="#d71010"
+                               wrapText="true">
+                            <font>
+                                <Font name="Chalkboard" size="18.0"/>
+                            </font>
+                            <padding>
+                                <Insets left="5.0"/>
+                            </padding>
+                            <VBox.margin>
+                                <Insets bottom="20.0" left="100.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="errorMessage" prefHeight="103.0" prefWidth="256.0" styleClass="tileBottom"
+                               stylesheets="@../stylesheets/labelstyle.css"
+                               text="Please complete the Tutorial step you are currently on to continue further."
+                               textFill="#bf1818" wrapText="true">
+                            <font>
+                                <Font name="Chalkboard" size="18.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            </padding>
+                            <VBox.margin>
+                                <Insets left="20.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fx:id="image1" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pictures/ProfileIcon.png"/>
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="30.0" right="10.0"/>
+                                    </HBox.margin>
+                                </ImageView>
+                                <VBox alignment="CENTER_LEFT" onMouseClicked="#playerOne" prefHeight="100.0"
+                                      prefWidth="120.0" spacing="3.0">
+                                    <children>
+                                        <Label fx:id="player1" text="YOU">
+                                            <font>
+                                                <Font name="Chalkboard" size="24.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="pointsPlayer1" text="0">
+                                            <font>
+                                                <Font name="Chalkboard" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </VBox>
+                                <Label fx:id="turn1" maxHeight="15.0" maxWidth="15.0" minHeight="25.0" minWidth="25.0"
+                                       prefHeight="15.0" prefWidth="15.0" styleClass="turn"
+                                       stylesheets="@../stylesheets/buttonstyle.css" visible="false"/>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#bot" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fx:id="image2" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pictures/ProfileIcon.png"/>
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="30.0" right="10.0"/>
+                                    </HBox.margin>
+                                </ImageView>
+                                <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="120.0" spacing="3.0">
+                                    <children>
+                                        <Label fx:id="player2" prefHeight="31.0" prefWidth="129.0" text="AI-Bot">
+                                            <font>
+                                                <Font name="Chalkboard" size="24.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="pointsPlayer2" text="0">
+                                            <font>
+                                                <Font name="Chalkboard" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </VBox>
+                                <Label fx:id="turn2" maxHeight="15.0" maxWidth="15.0" minHeight="25.0" minWidth="25.0"
+                                       prefHeight="15.0" prefWidth="15.0" styleClass="turn"
+                                       stylesheets="@../stylesheets/buttonstyle.css" visible="false"/>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </HBox>
+                    </children>
+                </VBox>
+            </left>
+            <right>
+                <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="instructions" prefHeight="459.0" prefWidth="300.0" styleClass="tileBottom"
+                               stylesheets="@../stylesheets/labelstyle.css" wrapText="true">
+                            <font>
+                                <Font name="Chalkboard" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets left="5.0" right="5.0"/>
+                            </padding>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Button mnemonicParsing="false" onMouseClicked="#previousStep" prefHeight="48.0"
+                                        prefWidth="111.0" styleClass="bigButton"
+                                        stylesheets="@../stylesheets/buttonstyle.css" text="Previous Step">
+                                    <font>
+                                        <Font name="Chalkboard" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Label fx:id="stepOverview" prefHeight="51.0" prefWidth="51.0" styleClass="tileBottom"
+                                       stylesheets="@../stylesheets/labelstyle.css" text="1/7">
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="20.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="Chalkboard" size="18.0"/>
+                                    </font>
+                                    <padding>
+                                        <Insets left="10.0"/>
+                                    </padding>
+                                </Label>
+                                <Button mnemonicParsing="false" onMouseClicked="#nextStep" prefHeight="51.0"
+                                        prefWidth="100.0" styleClass="bigButton"
+                                        stylesheets="@../stylesheets/buttonstyle.css" text="Next Step">
+                                    <font>
+                                        <Font name="Chalkboard" size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="20.0"/>
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" right="10.0" top="30.0"/>
+                    </BorderPane.margin>
+                </VBox>
+            </right>
+            <center>
+                <GridPane fx:id="board" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                          prefHeight="1000.0" prefWidth="1000.0"
+                          style="-fx-background-color: #c4c4c4; -fx-background-radius: 10; -fx-border-color: #c4c4c4; -fx-border-width: 5; -fx-border-radius: 10;"
+                          BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <BorderPane.margin>
+                        <Insets bottom="30.0" left="40.0" right="40.0" top="30.0"/>
+                    </BorderPane.margin>
+                </GridPane>
+            </center>
+        </BorderPane>
+        <BorderPane prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0">
+            <left>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="353.0" spacing="30.0"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="bag" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#tiles"
+                               prefHeight="55.0" prefWidth="120.0"
+                               style="-fx-background-color: #edece1; -fx-background-radius: 7; -fx-border-color: black; -fx-border-radius: 7; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.7), 7,0,0,0);"
+                               text="Exchange&#10;Tiles" textAlignment="CENTER">
+                            <font>
+                                <Font name="Chalkboard" size="18.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Label>
+                        <Button mnemonicParsing="false" onMouseClicked="#shuffle" prefHeight="55.0" prefWidth="120.0"
+                                style="-fx-background-color: #edece1;" styleClass="smallButton"
+                                stylesheets="@../stylesheets/buttonstyle.css" text="Shuffle">
+                            <font>
+                                <Font name="Chalkboard" size="18.0"/>
+                            </font>
+                            <tooltip>
+                                <Tooltip text="Shuffle your tiles!" textAlignment="JUSTIFY">
+                                    <showDelay>
+                                        <Duration millis="500"/>
+                                    </showDelay>
+                                </Tooltip>
+                            </tooltip>
+                        </Button>
+                    </children>
+                </HBox>
+            </left>
+            <right>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="353.0" spacing="30.0"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#submit" prefHeight="55.0" prefWidth="175.0"
+                                style="-fx-background-color: #edece1;" styleClass="smallButton"
+                                stylesheets="@../stylesheets/buttonstyle.css" text="Submit">
+                            <font>
+                                <Font name="Chalkboard" size="24.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                            <tooltip>
+                                <Tooltip text="Submit your turn and see how many points you made!"
+                                         textAlignment="JUSTIFY">
+                                    <showDelay>
+                                        <Duration millis="500"/>
+                                    </showDelay>
+                                </Tooltip>
+                            </tooltip>
+                        </Button>
+                    </children>
+                </HBox>
+            </right>
+            <center>
+                <GridPane fx:id="tiles" alignment="CENTER" hgap="10.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <BorderPane.margin>
+                        <Insets bottom="25.0" left="35.0" right="35.0" top="25.0"/>
+                    </BorderPane.margin>
+                </GridPane>
+            </center>
+        </BorderPane>
+        <VBox fx:id="tutorialWelcome" alignment="CENTER" prefHeight="460.0" prefWidth="462.0"
+              styleClass="agreementStyle" stylesheets="@../stylesheets/agreement.css" AnchorPane.bottomAnchor="130.0"
+              AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="110.0">
+            <children>
+                <VBox prefHeight="404.0" prefWidth="445.0">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="315.0" styleClass="tileBottom"
+                               stylesheets="@../stylesheets/labelstyle.css" text="Welcome to Scrabble Tutorial Mode!">
+                            <font>
+                                <Font name="Chalkboard" size="24.0"/>
+                            </font>
+                            <padding>
+                                <Insets left="5.0" right="5.0"/>
+                            </padding>
+                            <VBox.margin>
+                                <Insets left="80.0" top="30.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <Label prefHeight="50.0" prefWidth="449.0" styleClass="tileBottom"
+                               stylesheets="@../stylesheets/labelstyle.css"
+                               text="Here you will learn the Scrabble Basics in 5 minutes!" wrapText="true">
+                            <font>
+                                <Font name="Chalkboard" size="24.0"/>
+                            </font>
+                            <padding>
+                                <Insets left="5.0"/>
+                            </padding>
+                            <VBox.margin>
+                                <Insets bottom="30.0" left="10.0" top="30.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <Label prefHeight="50.0" prefWidth="207.0" styleClass="tileBottom"
+                               stylesheets="@../stylesheets/labelstyle.css" text="Click below to continue.">
+                            <font>
+                                <Font name="Chalkboard" size="24.0"/>
+                            </font>
+                            <padding>
+                                <Insets left="5.0"/>
+                            </padding>
+                            <VBox.margin>
+                                <Insets left="130.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <Button mnemonicParsing="false" onMouseClicked="#start" styleClass="bigButton"
+                                stylesheets="@../stylesheets/buttonstyle.css" text="Start">
+                            <font>
+                                <Font name="Chalkboard" size="24.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets left="185.0" top="30.0"/>
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
